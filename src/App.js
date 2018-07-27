@@ -109,10 +109,11 @@ class App extends Component {
 <ul>
 {
   profiles.map(profile => {
-  		let id = profile.id; 
+  		const userId = profile.userID; 
+  const movieId = profile.favoriteMovieID;
   	return (
   		<li key={profile.id}>
-			{`${users[id] && users[id].name} favorite movie is ${movies[id] && movies[id].name}.`} 
+			{`${users[userId] && users[userId].name}\'s favorite movie is ${movies[movieId] && movies[movieId].name}.`} 
 		</li>
 	)
 	})
